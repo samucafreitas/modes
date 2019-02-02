@@ -23,7 +23,7 @@ function kill_bars {
 }
 
 function coding_mode {
-    setsid feh --bg-scale $HOME/modes/wallpapers/coding/earth_space.jpg &
+    setsid feh --bg-scale $HOME/modes/modes/coding/earth_space.jpg &
     kill_bars
 
     notify-send "[INFO] Inner and Outer gaps set to 0..."
@@ -34,7 +34,7 @@ function coding_mode {
     i3-msg workspace '1: web', focus parent, kill > /dev/null 2>&1
 
     notify-send "[INFO] Loading layout file into i3..."
-    i3-msg "workspace 1: web; append_layout $HOME/layout.json" > /dev/null 2>&1
+    i3-msg "workspace 1: web; append_layout $HOME/modes/coding/layout.json" > /dev/null 2>&1
 
     notify-send "[INFO] Starting Termite with Tmux..."
     setsid termite -e tmux &

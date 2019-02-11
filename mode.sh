@@ -34,7 +34,7 @@ function coding_mode {
     i3-msg workspace '1: web', focus parent, kill > /dev/null 2>&1
 
     notify-send "[INFO] Loading layout file into i3..."
-    i3-msg "workspace 1: web; append_layout $HOME/modes/coding/layout.json" > /dev/null 2>&1
+    i3-msg "workspace 1: web; append_layout $HOME/modes/modes/coding/layout.json" > /dev/null 2>&1
 
     notify-send "[INFO] Starting Termite with Tmux..."
     setsid termite -e tmux &

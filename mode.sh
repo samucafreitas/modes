@@ -9,7 +9,7 @@ function start_mode {
         case $option in
             coding) nohup bash -c coding_mode &;;
             web) exit 0;;
-            me) kill_bars ; exit 0;;
+            me) nohup bash -c me_mode ; exit 0;;
             quit) exit 0;;
             *) warn_msg "Please, select an option!";;
         esac
@@ -58,7 +58,12 @@ function web_mode {
 }
 
 function me_mode {
-    return
+    setsid feh --bg-scale $HOME/modes/modes/coding/earth_space.jpg &
+    kill_bars
+
+    notify-send "[INFO] Inner and Outer gaps set to 0..."
+    i3-msg "gaps inner all set 0" > /dev/null 2>&1
+    i3-msg "gaps outer all set 0" > /dev/null 2>&1
 }
 
 export -f kill_bars

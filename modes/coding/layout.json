@@ -96,7 +96,7 @@
             "percent": 0.292217496263938,
             "swallows": [
                {
-                  "class": "^Nautilus$"
+                  "class": "Org.gnome.Nautilus"
                // "instance": "^nautilus$",
                // "title": "^Home$"
                }

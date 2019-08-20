@@ -50,6 +50,9 @@ function coding_mode {
 
     notify-send "[INFO] Starting Chrome with Momentum..."
     setsid google-chrome-stable --app chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/dashboard.html > /dev/null 2>&1 &
+
+    notify-send "[INFO] Starting Google Keep..."
+    setsid google-chrome-stable --profile-directory=Default --app-id=hmjkmjkepdijhoojdojkdfohbdgmmhki > /dev/null 2>&1 &
     exit 0
 }
 
